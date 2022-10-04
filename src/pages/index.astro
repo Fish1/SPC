@@ -1,0 +1,27 @@
+---
+import Card from '../components/Card.astro';
+import Navbar from '../components/Navbar.astro';
+import Layout from '../layouts/Layout.astro';
+
+import mowing from '@images/mowing.jpeg';
+import hedging from '@images/hedging.jpeg';
+import pool from '@images/pool.jpeg';
+import Footer from 'src/components/Footer.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="h-full flex flex-col">
+	<nav>
+		<Navbar title="SPC Property Management" />
+	</nav>
+	<main class="flex-grow">
+		<ul class="p-8 flex flex-wrap gap-10 justify-center">
+			<Card title="Lawn Mowing" body="expertly crafted grass" image={mowing}/>
+			<Card title="Hedging" body="beautiful hedges" image={hedging}/>
+			<Card title="Pool Cleaning" body="squeaky clean pools" image={pool}/>
+			<!-- <Card title="Flower Beds" body="angelic flowers"/> -->
+		</ul>
+	</main>
+	<Footer />
+	</div>
+</Layout>

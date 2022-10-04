@@ -1,0 +1,9 @@
+{
+  "name": "Client Container",
+  "dockerComposeFile": ["./docker-compose.devcontainer.yml"],
+  "service": "client",
+  "shutdownAction": "none",
+  "workspaceFolder": "/workspace/",
+  "remoteUser": "node",
+  "updateRemoteUserUID": true
+}

@@ -1,0 +1,39 @@
+---
+import '@fontsource/montserrat';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<script type="module" src="/app.js"></script>
+	</body>
+</html>
+
+<style>
+	html, body {
+		height: 100%;
+	}
+</style>
+
+<script>
+import Swup from 'swup';
+import SwupHeadPlugin from '@swup/head-plugin';
+import SwupSlideTheme from '@swup/slide-theme';
+const swup = new Swup({
+  plugins: [new SwupHeadPlugin(), new SwupSlideTheme()]
+});
+</script>

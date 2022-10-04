@@ -1,0 +1,28 @@
+---
+import { Image } from '@astrojs/image/components';
+
+export interface Props {
+	title: string;
+	body: string;
+	image: ImageMetadata;
+}
+
+const { title, body, image } = Astro.props;
+---
+
+<div class="card card-side shadow-lg transition-all bg-gradient-to-tl from-blue-300 to-rose-100 cursor-pointer hover:scale-110 hover:shadow-2xl">
+	<div class="card-body">
+		<div class="card-title">
+			{ title }
+		</div>
+		{ body }
+	</div>
+	<figure>
+		<Image
+			src={image}
+			class="shadow-2xl"
+			alt="test"
+			width="200" height="200"
+		/>
+	</figure>
+</div>

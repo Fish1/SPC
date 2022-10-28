@@ -2,6 +2,9 @@
   "name": "Client Container",
   "dockerComposeFile": ["./docker-compose.devcontainer.yml"],
   "service": "client",
+  "extensions": [
+    "astro-build.astro-vscode"
+  ],
   "shutdownAction": "none",
   "workspaceFolder": "/workspace/",
   "remoteUser": "node",
